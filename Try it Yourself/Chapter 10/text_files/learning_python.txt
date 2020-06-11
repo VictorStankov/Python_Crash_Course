@@ -1,0 +1,3 @@
+In Python I can create lists and dictionaries.
+In Python I can work with functions and classes.
+In Python I can do stuff :)
