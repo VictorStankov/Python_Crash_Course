@@ -1,11 +1,9 @@
-import pygal
+from pygal_maps_world.maps import World
 
-worldmap_chart = pygal.maps.world.World()
-worldmap_chart.title = 'Some Countries'
-worldmap_chart.add("F Countries", ['fr', 'fi'])
-worldmap_chart.add('M countries', ['ma', 'mc', 'md', 'me', 'mg',
-                                   'mk', 'ml', 'mm', 'mn', 'mo',
-                                   'mr', 'mt', 'mu', 'mv', 'mw',
-                                   'mx', 'my', 'mz'])
-worldmap_chart.add('U countries', ['ua', 'ug', 'us', 'uy', 'uz'])
-worldmap_chart.render()
+wm = World()
+wm.title = 'North, Central and South America'
+wm.add('North America', ['ca', 'mx', 'us'])
+wm.add('Central America', ['bz', 'cr', 'gt', 'hn', 'ni', 'pa', 'sv'])
+wm.add('South America', ['ar', 'bo', 'br', 'cl', 'co', 'ec', 'gf', 'gy', 'pe', 'py', 'sr', 'uy', 've'])
+# wm.render()
+wm.render_to_file('americas.svg')
